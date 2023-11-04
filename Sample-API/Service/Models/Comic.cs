@@ -1,4 +1,6 @@
-﻿namespace Sample_API.Service.Models
+﻿using static Sample_API.Service.Models.Character;
+
+namespace Sample_API.Service.Models
 {
     public class Comic
     {
@@ -31,12 +33,6 @@
         public Stories stories { get; set; }
         public Events events { get; set; }
 
-        public class Series
-        {
-            public string resourceURI { get; set; }
-            public string name { get; set; }
-        }
-
         public class Creators
         {
             public int available { get; set; }
@@ -45,54 +41,12 @@
             public int returned { get; set; }
         }
 
-        public class Item
-        {
-            public string resourceURI { get; set; }
-            public string name { get; set; }
-            public string role { get; set; }
-        }
-
         public class Characters
         {
             public int available { get; set; }
             public string collectionURI { get; set; }
             public Item1[] items { get; set; }
             public int returned { get; set; }
-        }
-
-        public class Item1
-        {
-            public string resourceURI { get; set; }
-            public string name { get; set; }
-        }
-
-        public class Stories
-        {
-            public int available { get; set; }
-            public string collectionURI { get; set; }
-            public Item2[] items { get; set; }
-            public int returned { get; set; }
-        }
-
-        public class Item2
-        {
-            public string resourceURI { get; set; }
-            public string name { get; set; }
-            public string type { get; set; }
-        }
-
-        public class Events
-        {
-            public int available { get; set; }
-            public string collectionURI { get; set; }
-            public object[] items { get; set; }
-            public int returned { get; set; }
-        }
-
-        public class Url
-        {
-            public string type { get; set; }
-            public string url { get; set; }
         }
 
         public class Variant
